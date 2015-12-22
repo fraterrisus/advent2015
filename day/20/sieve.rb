@@ -10,7 +10,10 @@ def factors_of(number)
 end
 
 def how_many_presents(house_num)
-  factors_of(house_num).reduce(:+) * 10
+  # part 1
+  #factors_of(house_num).reduce(:+) * 10
+  # part 2
+  factors_of(house_num).select { |x| house_num < x * 50 }.reduce(:+) * 11
 end
 
 limit = ARGV.shift.to_i
